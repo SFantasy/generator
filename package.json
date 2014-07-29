@@ -1,0 +1,32 @@
+{
+  "name": "npm-generator",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:SFantasy/generator.git"
+  },
+  "keywords": [
+    "generator",
+    "node",
+    "npm",
+    "scaffold"
+  ],
+  "author": {
+    "name": "fantasy",
+    "email": "fantasyshao@icloud.com",
+    "url": "http://fantasy.codes"
+  },
+  "bin": {
+    "npm-generator": "./bin/npm-generator"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SFantasy/generator/issues"
+  },
+  "devDependencies": {
+    "mkdirp": "~0.5.0",
+    "commander": "~2.3.0"
+  }
+}
