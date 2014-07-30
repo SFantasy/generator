@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-var npm-generator = require('../index');
+var npm_generator = require('../index');
 
-npm-generator();
+npm_generator();
