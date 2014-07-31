@@ -30,15 +30,20 @@ var license   = fs.readFileSync(__dirname + '/templates/LICENSE', 'utf-8');
 var gitignore = fs.readFileSync(__dirname + '/templates/.gitignore', 'utf-8');
 var npmignore = fs.readFileSync(__dirname + '/templates/.npmignore', 'utf-8');
 var travis    = fs.readFileSync(__dirname + '/templates/.travis.yml', 'utf-8');
+var reademe   = fs.readFileSync(__dirname + '/templates/README.md', 'utf-8');
 
 function generator() {
-    console.log(pkg_path);
+    console.log('\n  Generating package...\n');
     var mkdir = util.mkdir,
         writeFile = util.writeFile;
 
     mkdir(pkg_path, function() {
+        // Directories
         mkdir(pkg_path + '/lib');
         mkdir(pkg_path + '/bin');
+
+        // Other files
+        writeFile(pkg_path + '/README.md', reademe);
         writeFile(pkg_path + '/LICENSE', license);
         writeFile(pkg_path + '/.gitignore', gitignore);
         writeFile(pkg_path + '/.npmignore', npmignore);
