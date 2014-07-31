@@ -26,15 +26,23 @@ commander
 var pkg_path = commander.args.shift() || '.';
 
 // Files
-var license = fs.readFileSync(__dirname + '/templates/LICENSE', 'utf-8');
+var license   = fs.readFileSync(__dirname + '/templates/LICENSE', 'utf-8');
+var gitignore = fs.readFileSync(__dirname + '/templates/.gitignore', 'utf-8');
+var npmignore = fs.readFileSync(__dirname + '/templates/.npmignore', 'utf-8');
+var travis    = fs.readFileSync(__dirname + '/templates/.travis.yml', 'utf-8');
 
 function generator() {
     console.log(pkg_path);
+    var mkdir = util.mkdir,
+        writeFile = util.writeFile;
 
-    util.mkdir(pkg_path, function() {
-        util.mkdir(pkg_path + '/lib');
-        util.mkdir(pkg_path + '/bin');
-        util.writeFile(pkg_path + '/LICENSE', license);
+    mkdir(pkg_path, function() {
+        mkdir(pkg_path + '/lib');
+        mkdir(pkg_path + '/bin');
+        writeFile(pkg_path + '/LICENSE', license);
+        writeFile(pkg_path + '/.gitignore', gitignore);
+        writeFile(pkg_path + '/.npmignore', npmignore);
+        writeFile(pkg_path + '/.travis.yml', travis);
     });
 }
 
