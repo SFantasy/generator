@@ -9,6 +9,8 @@ Description of the package.
 
 ## Todo
 
+- Sample todo item
+
 ## License
 
 The MIT License
