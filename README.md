@@ -1,7 +1,9 @@
 Generator
----
+========
 
-**PACKAGE DEVELOPING**
+Simple NPM package generator.
+
+[![NPM](https://nodei.co/npm/npm-generator.png)](https://nodei.co/npm/npm-generator/)
 
 ## Install
 
@@ -14,7 +16,7 @@ Generator
 ### Generate package
 
 ```
-npm-generator test
+npm-generator package-name
 ```
 
 ### Sample structure
