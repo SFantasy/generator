@@ -27,12 +27,12 @@
   },
   "devDependencies": {
     "mkdirp": "~0.5.0",
-    "commander": "~2.3.0",
+    "commander": "~2.4.0",
     "init-package-json": "~1.0.0",
     "npm": "~1.4.23"
   },
   "dependencies": {
     "mkdirp": "~0.5.0",
-    "commander": "~2.3.0"
+    "commander": "~2.4.0"
   }
 }
